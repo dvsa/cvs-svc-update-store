@@ -163,7 +163,7 @@ const upsertTestResults = async (testResults: TestResults): Promise<TestResultUp
     return upsertResults;
 };
 
-const deleteTestResults = async (_testResult: TestResults): Promise<void> => {
+const deleteTestResults = async (/* testResult: TestResults */): Promise<void> => {
     throw new Error("deleting test results is not implemented yet");
 };
 

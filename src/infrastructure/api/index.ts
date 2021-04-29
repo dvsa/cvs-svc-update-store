@@ -1,4 +1,4 @@
-import express from 'express';
+import express from "express";
 
 const app = express();
 
@@ -13,28 +13,28 @@ const { API_VERSION } = process.env;
  * (POST) http://localhost:3009/<stage>/                                 (configured on AWS)
  *                                      <**>/<*>/template/:id/something  (configured/proxied from app)
  */
-router.get('/', (_, res, next) => {
-  res.send('ok template route');
+router.get("/", (_, res, next) => {
+  res.send("ok template route");
   next();
 });
 
-router.post('/:id/something', (_, res, next) => {
-  res.send('ok /id/something');
+router.post("/:id/something", (_, res, next) => {
+  res.send("ok /id/something");
   next();
 });
 
 // Defining template routes, anything before /template is proxied
-app.use('/*/template/', router);
+app.use("/*/template/", router);
 
 /**
  * Debug router before we start proxying
  */
-app.get('/version', (_, res) => {
+app.get("/version", (_, res) => {
   res.send({ version: API_VERSION });
 });
 
 // Serverless lambda invocation debug route - local/database/base-path.json
-app.get('/', (_, res) => {
+app.get("/", (_, res) => {
   res.send({ ok: true });
 });
 

@@ -205,7 +205,7 @@ const upsertTechRecords = async (techRecordDocument: TechRecordDocument): Promis
     return upsertResults;
 };
 
-const deleteTechRecords = async (_techRecordDocument: TechRecordDocument): Promise<void> => {
+const deleteTechRecords = async (/* techRecordDocument: TechRecordDocument */): Promise<void> => {
     throw new Error("deleting tech record documents is not implemented yet");
 };
 
