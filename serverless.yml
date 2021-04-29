@@ -1,6 +1,17 @@
 service: cvs-tsk-update-store
 
-provider:
+
+
+plugins:
+  - serverless-plugin-typescript
+    # .dotenv is not currently supported so we use this serverless plugin for env configuration
+  - serverless-dotenv-plugin
+    # https://github.com/serverless-heaven/serverless-webpack/tree/master/examples
+  - serverless-webpack
+  - serverless-offline
+  - serverless-plugin-tracing
+
+  provider:
   name: aws
   runtime: nodejs10.x
   tracing:
@@ -16,18 +27,13 @@ provider:
           Resource:
             - "*"
 
-plugins:
-  - serverless-plugin-typescript
-  - serverless-offline
-  - serverless-plugin-tracing
-
 functions:
   main:
     handler: src/handler.handler
     events:
-    - sqs:
-        arn: arn:aws:sqs:region:XXXXXX:update-store-q
-        batchSize: 10
+      - sqs:
+          arn: arn:aws:sqs:region:XXXXXX:update-store-q
+          batchSize: 10
 
 custom:
   serverless-offline:

@@ -1,11 +1,11 @@
 import {StartedTestContainer} from "testcontainers";
-import {destroyConnectionPool, executeSql} from "../../src/services/connection-pool";
+import {destroyConnectionPool, executeSql} from "../../src/infrastructure/database/connection-pool";
 import {exampleContext, useLocalDb} from "../utils";
 import techRecordDocumentJson from "../resources/dynamodb-image-technical-record.json";
 import {getContainerizedDatabase} from "./cvsbnop-container";
-import {TechRecordUpsertResult} from "../../src/models/upsert-results";
-import {processStreamEvent} from "../../src/functions/process-stream-event";
-import {getConnectionPoolOptions} from "../../src/services/connection-pool-options";
+import {TechRecordUpsertResult} from "../../src/app/models/upsert-results";
+import {processStreamEvent} from "../../src/app/process-stream-event";
+import {getConnectionPoolOptions} from "../../src/infrastructure/database/connection-pool-options";
 
 useLocalDb();
 

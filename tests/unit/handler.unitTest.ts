@@ -1,4 +1,4 @@
-import {processStreamEvent} from "../../src/functions/process-stream-event";
+import {processStreamEvent} from "../../src/app/process-stream-event";
 import {handler} from "../../src/handler";
 import {config} from "aws-sdk";
 import {CredentialsOptions} from "aws-sdk/lib/credentials";

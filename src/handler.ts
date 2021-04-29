@@ -1,4 +1,4 @@
-import {processStreamEvent} from "./functions/process-stream-event";
+import {processStreamEvent} from "./app/process-stream-event";
 import {config as AWSConfig} from "aws-sdk";
 
 const isOffline: boolean = (!process.env.BRANCH || process.env.BRANCH === "local");

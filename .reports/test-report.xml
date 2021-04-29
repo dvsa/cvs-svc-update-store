@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="C:\Code\dvsa\cvs-tsk-update-store\tests\integration\tech-record-document-conversion.intTest.ts">
+        <testCase name="convertTechRecordDocument() integration tests should correctly convert a DynamoDB event into Aurora rows" duration="28">
+            <failure message="Error: connect ENOENT //./pipe/docker_engine"><![CDATA[Error: connect ENOENT //./pipe/docker_engine
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)]]></failure>
+            <failure message="Error: expect(received).toEqual(expected) // deep equality"><![CDATA[Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 1
+Received: 0
+    at Object.<anonymous> (C:\Code\dvsa\cvs-tsk-update-store\tests\integration\tech-record-document-conversion.intTest.ts:63:38)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)]]></failure>
+        </testCase>
+    </file>
+    <file path="C:\Code\dvsa\cvs-tsk-update-store\tests\integration\test-results-conversion.intTest.ts">
+        <testCase name="convertTestResults() integration tests should correctly convert a DynamoDB event into Aurora rows" duration="7">
+            <failure message="Error: connect ENOENT //./pipe/docker_engine"><![CDATA[Error: connect ENOENT //./pipe/docker_engine
+    at PipeConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)]]></failure>
+            <failure message="Error: expect(received).toEqual(expected) // deep equality"><![CDATA[Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 1
+Received: 0
+    at Object.<anonymous> (C:\Code\dvsa\cvs-tsk-update-store\tests\integration\test-results-conversion.intTest.ts:63:38)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)]]></failure>
+        </testCase>
+    </file>
+</testExecutions>

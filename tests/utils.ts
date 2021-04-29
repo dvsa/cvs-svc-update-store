@@ -1,7 +1,7 @@
 import {AttributeValue} from "aws-sdk/clients/dynamodbstreams";
 import path from "path";
-import {getSecretValue} from "../src/services/secrets-manager";
-import {SecretsManagerConfig} from "../src/models/aws-sm-config";
+import {getSecretValue} from "../src/infrastructure/secrets-manager/secrets-manager";
+import {SecretsManagerConfig} from "../src/app/models/aws-sm-config";
 import {Context} from "aws-lambda";
 
 // DO NOT MOVE THIS FILE.
